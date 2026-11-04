@@ -1,0 +1,123 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>portal de jogos</title>
+<style>
+    body{
+        background: rgb(97, 2, 97);
+    }
+
+    hr{
+        box-shadow: 0 0 10px black;
+    }
+    
+    .jogos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3vh;
+        justify-self: center;
+        animation: float 4s infinite ease-in-out;
+        margin-top: 3vh;
+    }
+
+    .jogos img{
+        border: 3px solid black;
+    }
+    .jogos img:hover{
+        transform: scale(1.03);
+        transition: 0.7s;
+        box-shadow: 0 0 10px black;
+    }
+
+    @media (max-width:800px) {
+        .jogos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3vh;
+        justify-self: center;
+        animation: float 4s infinite ease-in-out;
+    }
+    @media (max-width:600px) {
+        .jogos{
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+        justify-self: center;
+        animation: float 4s infinite ease-in-out;
+    }
+}   
+    }
+table{
+    background: rgb(61, 2, 61);
+    border: 2px solid black;
+    color: rgb(255, 235, 162);
+}
+table th,td{
+    border: 0.5px solid black;
+    padding: 10px;
+}
+    @keyframes float {
+        0%{transform: translateY(-5px);}
+        50%{transform: translateY(5px);}
+        100%{transform: translateY(-5px);}
+    }
+
+    @keyframes glow {
+        0%{text-shadow: 0 0 0;}
+        50%{text-shadow: 0 0 40px navy;}
+        100%{text-shadow: 0 0 0;}
+        
+    }
+</style>
+</head>
+<body>
+<p align="center" style="animation: glow 3s infinite ease-in-out;"><font color="darkblue" size="7" face="orbitron"><b>PORTAL DE JOGOS</b></font></p>
+<hr color="black" size="2" width="100%">
+<marquee direction="rigth" scrollamount="25%" behaviour="alternate">
+<p align="center" style="text-shadow: 0 0 10px red;"><font color="red" size="6" face="rajdhani semibold">[MELHORES JOGOS ONLINE]</font></p>
+</marquee>
+<hr color="black" size="2" width="100%">
+<div class="jogos" ><img src="img/mine.jpg" width="250" height="150"><img src="img/fortnite.jpg" width="250" height="150"><img src="img/freefire.jpg" width="250" height="150"><img src="img/cod.jpg" width="250" height="150" ><img src="img/fifa.jpg" width="250" height="150" ></div><br><br>
+<table border="1" align="center">
+<tr>
+<th>JOGO</th>
+<th>CATEGORIA/GENERO</th>
+<th>PLATAFORMAS</th>
+<th>MODELO</th>
+<th>ESTILO DE JOGO</th>
+</tr>
+<tr>
+<th>Minecraft</th>
+<td>Sobrevivencia</td>
+<td>PC,Consoles,Mobile</td>
+<td>Pago</td>
+<td>Mundo aberto infinito focado em construcao com blocos , exploracao e cooperacao</td>
+</tr>
+<th>Fortnite</th>
+<td>Battle Royale</td>
+<td>PC,Consoles,Mobile</td>
+<td>Gratuito</td>
+<td>Sobrevivencia de ate 100 jogadores no mapa , com dinamicas de construcao e eventos ao vivo</td>
+</tr>
+<th>Free Fire</th>
+<td>Battle Royale</td>
+<td>PC,Mobile</td>
+<td>Gratuito</td>
+<td>Sobrevivencia com partidas rapidas de ate 50 jogadores no mapa , leve para smartphones e focado em tiroteiros e uso de personagens com habilidades</td>
+</tr>
+<th>Call of Duty</th>
+<td>Battle Royale/FPS/Tiro tatico</td>
+<td>PC,Consoles,Mobile</td>
+<td>Gratuito</td>
+<td>Tiro em primeira pessoa com movimentacao agil, tiroteiros realistas em grande escala e gerenciamento de armamentos customizados</td>
+</tr>
+<th>EA Sports FC</th>
+<td>Simulacao de futebol</td>
+<td>PC,Consoles,Mobile</td>
+<td>pago</td>
+<td> Simulador oficial de futebol com modos competitivos online e partidas contra outros jogadores</td>
+</tr>
+</table>
+</body>
+</html>
