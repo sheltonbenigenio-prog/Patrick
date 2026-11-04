@@ -6,10 +6,19 @@
 <style>
     body{
         background: rgb(97, 2, 97);
+        animation: apear 1s ease-in-out;
     }
 
     hr{
         box-shadow: 0 0 10px black;
+    }
+
+    .online{
+        background: rgb(60, 3, 60);
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
     
     .jogos{
@@ -21,14 +30,42 @@
         margin-top: 3vh;
     }
 
-    .jogos img{
+    .jogo img{
         border: 3px solid black;
+        position: relative;
+        
     }
-    .jogos img:hover{
+    .jogo img:hover{
         transform: scale(1.03);
         transition: 0.7s;
         box-shadow: 0 0 10px black;
     }
+
+    .jogo:has(img:hover) p {
+        z-index: 20;
+        transition: 1s;
+    }
+
+    .jogo p{
+       position: absolute;
+       background-color: black;
+       border-radius: 10px;
+       z-index: 0;
+       color: whitesmoke;
+       font-family: sans-serif;
+       align-self: center;
+       padding: 10px;
+       margin-left: 33%;
+    }
+
+    .jogo p:hover{
+        background-color: cornsilk;
+        z-index: 20;
+        color: black;
+        transition: 0.6s;
+        cursor: pointer;
+    }
+
 
     @media (max-width:800px) {
         .jogos{
@@ -51,13 +88,15 @@
 table{
     background: rgb(61, 2, 61);
     border: 2px solid black;
-    color: rgb(255, 235, 162);
+    color: cornsilk;
     min-width: 800px;
+
 }
 table th,td{
     border: 0.5px solid black;
     padding: 10px;
     white-space: nowrap;
+
 }
 
 .tabela{
@@ -80,22 +119,35 @@ a{
         100%{text-shadow: 0 0 0;}
         
     }
+
+    @keyframes apear {
+        0%{transform: translateY(15px);
+        opacity: 0;}
+        100%{transform: translateY(0px);
+        opacity: 1;}
+        
+    }
 </style>
 </head>
 <body>
-<p align="center" style="animation: glow 3s infinite ease-in-out;"><font color="darkblue" size="7" face="orbitron"><b>PORTAL DE JOGOS</b></font></p>
+<p align="center" style="animation: glow 3s infinite ease-in-out; -webkit-text-stroke: 1px black;"><font color="darkblue" size="7" face="orbitron"><b>PORTAL DE JOGOS</b></font></p>
+
+<section class="online">
 <hr color="black" size="2" width="100%">
-<marquee direction="rigth" scrollamount="25%" behaviour="alternate">
-<p align="center" style="text-shadow: 0 0 10px red;"><font color="red" size="6" face="rajdhani semibold">[MELHORES JOGOS ONLINE]</font></p>
+<marquee direction="rigth" scrollamount="20%" behaviour="alternate">
+<p align="center" style="text-shadow: 0 0 10px red; -webkit-text-stroke: 0.4px black;"><font color="red" size="6" face="rajdhani semibold">[MELHORES JOGOS ONLINE]</font></p>
 </marquee>
 <hr color="black" size="2" width="100%">
+
+</section>
 <div class="jogos" >
-    <img id="mine" src="img/mine.jpg" width="250" height="150">
-    <img id="fort" src="img/fortnite.jpg" width="250" height="150">
-    <img id="ff" src="img/freefire.jpg" width="250" height="150">
-    <img id="cod" src="img/cod.jpg" width="250" height="150" >
-    <img id="fifa" src="img/fifa.jpg" width="250" height="150" >
-</div><br><br>
+    <div class="jogo"><p>Minecraft</p><img id="mine" src="img/mine.jpg" width="250" height="150"></div>
+    <div class="jogo"><p>Fortnite</p><img id="fort" src="img/fortnite.jpg" width="250" height="150"></div>
+    <div class="jogo"><p>FreeFire</p><img id="ff" src="img/freefire.jpg" width="250" height="150"></div>
+    <div class="jogo"><p>Call of Duty</p><img id="cod" src="img/cod.jpg" width="250" height="150" ></div>
+    <div class="jogo"><p>Fc27</p><img id="fifa" src="img/fifa.jpg" width="250" height="150" ></div>
+</div>
+<br><br>
 <div class="tabela">
 <table border="1" align="center">
 <tr>
