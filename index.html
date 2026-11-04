@@ -52,10 +52,21 @@ table{
     background: rgb(61, 2, 61);
     border: 2px solid black;
     color: rgb(255, 235, 162);
+    min-width: 800px;
 }
 table th,td{
     border: 0.5px solid black;
     padding: 10px;
+    white-space: nowrap;
+}
+
+.tabela{
+    width: 100%;
+    overflow-x: auto;
+}
+
+a{
+    text-decoration: none;
 }
     @keyframes float {
         0%{transform: translateY(-5px);}
@@ -78,7 +89,14 @@ table th,td{
 <p align="center" style="text-shadow: 0 0 10px red;"><font color="red" size="6" face="rajdhani semibold">[MELHORES JOGOS ONLINE]</font></p>
 </marquee>
 <hr color="black" size="2" width="100%">
-<div class="jogos" ><img src="img/mine.jpg" width="250" height="150"><img src="img/fortnite.jpg" width="250" height="150"><img src="img/freefire.jpg" width="250" height="150"><img src="img/cod.jpg" width="250" height="150" ><img src="img/fifa.jpg" width="250" height="150" ></div><br><br>
+<div class="jogos" >
+    <img id="mine" src="img/mine.jpg" width="250" height="150">
+    <img id="fort" src="img/fortnite.jpg" width="250" height="150">
+    <img id="ff" src="img/freefire.jpg" width="250" height="150">
+    <img id="cod" src="img/cod.jpg" width="250" height="150" >
+    <img id="fifa" src="img/fifa.jpg" width="250" height="150" >
+</div><br><br>
+<div class="tabela">
 <table border="1" align="center">
 <tr>
 <th>JOGO</th>
@@ -119,5 +137,6 @@ table th,td{
 <td> Simulador oficial de futebol com modos competitivos online e partidas contra outros jogadores</td>
 </tr>
 </table>
+</div>
 </body>
 </html>
