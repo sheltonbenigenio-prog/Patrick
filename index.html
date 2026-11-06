@@ -5,7 +5,14 @@
 <title>portal de jogos</title>
 <style>
     body{
-        background: rgb(97, 2, 97);
+        background: radial-gradient(
+            circle at top ,
+            rgb(194, 26, 141),
+            rgb(110, 6, 76),
+            rgb(57, 9, 34),
+            rgb(61, 10, 77)
+            );
+        background-size: 100%;
         animation: apear 1s ease-in-out;
     }
 
@@ -20,25 +27,31 @@
         top: 0;
         z-index: 100;
     }
-    
-    .jogos{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 3vh;
-        justify-self: center;
-        animation: float 4s infinite ease-in-out;
-        margin-top: 3vh;
+
+
+    .games{
+        overflow: hidden;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .jogos {
+        display: flex;
+        gap: 20px;
+        animation: slide 15s linear infinite;
+        width: max-content;
     }
 
     .jogo img{
         border: 3px solid black;
         position: relative;
+        box-shadow: 0 0 5px black;
         
     }
     .jogo img:hover{
         transform: scale(1.03);
         transition: 0.7s;
-        box-shadow: 0 0 10px black;
+        box-shadow: 0 0 20px black;
     }
 
     .jogo:has(img:hover) p {
@@ -55,7 +68,7 @@
        font-family: sans-serif;
        align-self: center;
        padding: 10px;
-       margin-left: 33%;
+       margin-left: 3.1%;
     }
 
     .jogo p:hover{
@@ -67,7 +80,7 @@
     }
 
 
-    @media (max-width:800px) {
+    /* @media (max-width:800px) {
         .jogos{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -84,9 +97,9 @@
         animation: float 4s infinite ease-in-out;
     }
 }   
-    }
+    } */
 table{
-    background: rgb(61, 2, 61);
+    background: none;
     border: 2px solid black;
     color: cornsilk;
     min-width: 800px;
@@ -127,6 +140,11 @@ a{
         opacity: 1;}
         
     }
+
+    @keyframes slide {
+        from {transform: translateX(0);}
+        to {transform: translateX(-50%);}
+    }
 </style>
 </head>
 <body>
@@ -140,12 +158,19 @@ a{
 <hr color="black" size="2" width="100%">
 
 </section>
+<div class="games">
 <div class="jogos" >
     <div class="jogo"><p>Minecraft</p><img id="mine" src="img/mine.jpg" width="250" height="150"></div>
     <div class="jogo"><p>Fortnite</p><img id="fort" src="img/fortnite.jpg" width="250" height="150"></div>
     <div class="jogo"><p>FreeFire</p><img id="ff" src="img/freefire.jpg" width="250" height="150"></div>
     <div class="jogo"><p>Call of Duty</p><img id="cod" src="img/cod.jpg" width="250" height="150" ></div>
     <div class="jogo"><p>Fc27</p><img id="fifa" src="img/fifa.jpg" width="250" height="150" ></div>
+    <div class="jogo"><p>Minecraft</p><img id="mine" src="img/mine.jpg" width="250" height="150"></div>
+    <div class="jogo"><p>Fortnite</p><img id="fort" src="img/fortnite.jpg" width="250" height="150"></div>
+    <div class="jogo"><p>FreeFire</p><img id="ff" src="img/freefire.jpg" width="250" height="150"></div>
+    <div class="jogo"><p>Call of Duty</p><img id="cod" src="img/cod.jpg" width="250" height="150" ></div>
+    <div class="jogo"><p>Fc27</p><img id="fifa" src="img/fifa.jpg" width="250" height="150" ></div>
+</div>
 </div>
 <br><br>
 <div class="tabela">
